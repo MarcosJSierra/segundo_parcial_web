@@ -38,6 +38,7 @@ function saltar() {
   holes.forEach(holet => hole.classList.add('up'));
   setTimeout(() => {
     // 3. Eliminar la clase 'up' para que el bug desaparezca
+    holes.forEach(holet => hole.classList.remove('up'));
     // Hace que un nuevo bug salte desde un agujero si el tiempo no ha terminado
     if (!timeUp) saltar();
   }, time)
